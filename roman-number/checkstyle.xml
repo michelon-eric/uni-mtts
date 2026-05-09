@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+	"-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+	"https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+
+	<!-- header da inserire in ogni file -->
+	<module name="Header">
+		<property name="header"
+				  value="////////////////////////////////////////////////////////////////////\n// Eric Michelon 2147986\n////////////////////////////////////////////////////////////////////"/>
+	</module>
+
+	<!-- lunghezza massima del file per evitare file troppo grandi -->
+	<module name="FileLength"/>
+	<!-- lunghezza massima della riga per migliorare la leggibilita' -->
+	<module name="LineLength"/>
+
+	<!-- forza tab/spazio unico per tutti i file -->
+	<module name="FileTabCharacter"/>
+
+	<module name="TreeWalker">
+		<!-- complessita' -->
+		<module name="BooleanExpressionComplexity"/>
+		<module name="CyclomaticComplexity"/>
+
+		<!-- lunghezza -->
+		<module name="MethodLength"/>
+
+		<!-- code style -->
+		<module name="EmptyCatchBlock"/>
+		<module name="AvoidStarImport"/>
+		<module name="IllegalImport"/>
+		<module name="NeedBraces"/>
+	</module>
+</module>
