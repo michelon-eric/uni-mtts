@@ -145,7 +145,27 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    public void testConvertGreaterThan500_shouldReturnNull() {
-        assertNull(IntegerToRoman.convert(501));
+    public void testConvert900_shouldReturnCM() {
+        assertEquals("CM", IntegerToRoman.convert(900));
+    }
+
+    @Test
+    public void testConvert901_shouldReturnCMI() {
+        assertEquals("CMI", IntegerToRoman.convert(901));
+    }
+
+    @Test
+    public void testConvert999_shouldReturnCMXCIX() {
+        assertEquals("CMXCIX", IntegerToRoman.convert(999));
+    }
+
+    @Test
+    public void testConvert1000_shouldReturnM() {
+        assertEquals("M", IntegerToRoman.convert(1000));
+    }
+
+    @Test
+    public void testConvertGreaterThan1000_shouldReturnNull() {
+        assertNull(IntegerToRoman.convert(1001));
     }
 }
