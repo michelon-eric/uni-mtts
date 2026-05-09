@@ -43,6 +43,13 @@ public class RomanPrinter {
 		"| |___ ",
 		" \\____|",
 	};
+	private static final String[] D = {
+		" ____  ",
+		"|  _ \\ ",
+		"| | | |",
+		"| |_| |",
+		"|____/ ",
+	};
 
 	public static String print(int num) {
         return printAsciiArt(IntegerToRoman.convert(num));
@@ -77,6 +84,7 @@ public class RomanPrinter {
             case 'X' -> X;
             case 'L' -> L;
             case 'C' -> C;
+            case 'D' -> D;
             default -> new String[]{ "", "", "", "", "" };
         };
     }
