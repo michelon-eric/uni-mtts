@@ -113,6 +113,21 @@ public class RomanPrinterTest {
 		);
 	}
 
+	@Test
+	public void testPrint1000_shouldContainAsciiM() {
+		int number = 1000;
+		String result = RomanPrinter.print(number);
+		assertNotNull(result);
+		assertEquals(
+			" __  __  \n" +
+			"|  \\/  | \n" +
+			"| |\\/| | \n" +
+			"| |  | | \n" +
+			"|_|  |_| \n",
+			result
+		);
+	}
+
     @Test
     public void testPrint6_shouldContainAsciiVI() {
         int number = 6;
