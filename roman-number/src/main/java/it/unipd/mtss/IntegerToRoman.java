@@ -9,7 +9,9 @@ public class IntegerToRoman {
     };
 
     private static final String[] SYMBOLS = {
-            "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"
+            "M", "CM", "D", "CD", "C", "XC",
+            "L", "XL", "X", "IX", "V", "IV",
+            "I"
     };
 
     public static String convert(int number) {
