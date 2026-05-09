@@ -1,15 +1,15 @@
 ////////////////////////////////////////////////////////////////////
-// [ERIC] [MICHELON] [2147986]
+// Eric Michelon 2147986
 ////////////////////////////////////////////////////////////////////
 package it.unipd.mtss;
 
 public class RomanPrinter {
-	public static String print(int num) {
-		return printAsciiArt(IntegerToRoman.convert(num));
-	}
+  public static String print(int num) {
+    return printAsciiArt(IntegerToRoman.convert(num));
+  }
 
-	private static String printAsciiArt(String romanNumber) {
-		// TODO
-		return null;
-	}
+  private static String printAsciiArt(String romanNumber) {
+    // TODO
+    return null;
+  }
 }
