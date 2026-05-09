@@ -14,12 +14,12 @@ public class RomanPrinterTest {
         String result = RomanPrinter.print(number);
         assertNotNull(result);
         assertEquals(
-            " ___  \n" +
-            "|_ _| \n" +
-            " | |  \n" +
-            " | |  \n" +
-            "|___| \n",
-            result
+                " ___  \n" +
+                        "|_ _| \n" +
+                        " | |  \n" +
+                        " | |  \n" +
+                        "|___| \n",
+                result
         );
     }
 
@@ -29,12 +29,12 @@ public class RomanPrinterTest {
         String result = RomanPrinter.print(number);
         assertNotNull(result);
         assertEquals(
-            " ___  __     __ \n" +
-                "|_ _| \\ \\   / / \n" +
-                " | |   \\ \\ / /  \n" +
-                " | |    \\ V /   \n" +
-                "|___|    \\_/    \n",
-            result
+                " ___  __     __ \n" +
+                        "|_ _| \\ \\   / / \n" +
+                        " | |   \\ \\ / /  \n" +
+                        " | |    \\ V /   \n" +
+                        "|___|    \\_/    \n",
+                result
         );
     }
 
@@ -44,12 +44,12 @@ public class RomanPrinterTest {
         String result = RomanPrinter.print(number);
         assertNotNull(result);
         assertEquals(
-            "__     __ \n" +
-                "\\ \\   / / \n" +
-                " \\ \\ / /  \n" +
-                "  \\ V /   \n" +
-                "   \\_/    \n",
-            result
+                "__     __ \n" +
+                        "\\ \\   / / \n" +
+                        " \\ \\ / /  \n" +
+                        "  \\ V /   \n" +
+                        "   \\_/    \n",
+                result
         );
     }
 
@@ -59,12 +59,12 @@ public class RomanPrinterTest {
         String result = RomanPrinter.print(number);
         assertNotNull(result);
         assertEquals(
-            "__  __ \n" +
-                "\\ \\/ / \n" +
-                " \\  /  \n" +
-                " /  \\  \n" +
-                "/_/\\_\\ \n",
-            result
+                "__  __ \n" +
+                        "\\ \\/ / \n" +
+                        " \\  /  \n" +
+                        " /  \\  \n" +
+                        "/_/\\_\\ \n",
+                result
         );
     }
 
@@ -74,12 +74,12 @@ public class RomanPrinterTest {
         String result = RomanPrinter.print(number);
         assertNotNull(result);
         assertEquals(
-            " _      \n" +
-            "| |     \n" +
-            "| |     \n" +
-            "| |___  \n" +
-            "|_____| \n",
-            result
+                " _      \n" +
+                        "| |     \n" +
+                        "| |     \n" +
+                        "| |___  \n" +
+                        "|_____| \n",
+                result
         );
     }
 
@@ -89,12 +89,12 @@ public class RomanPrinterTest {
         String result = RomanPrinter.print(number);
         assertNotNull(result);
         assertEquals(
-            "  ____  \n" +
-            " / ___| \n" +
-            "| |     \n" +
-            "| |___  \n" +
-            " \\____| \n",
-            result
+                "  ____  \n" +
+                        " / ___| \n" +
+                        "| |     \n" +
+                        "| |___  \n" +
+                        " \\____| \n",
+                result
         );
     }
 
@@ -104,12 +104,12 @@ public class RomanPrinterTest {
         String result = RomanPrinter.print(number);
         assertNotNull(result);
         assertEquals(
-            " ____   \n" +
-            "|  _ \\  \n" +
-            "| | | | \n" +
-            "| |_| | \n" +
-            "|____/  \n",
-            result
+                " ____   \n" +
+                        "|  _ \\  \n" +
+                        "| | | | \n" +
+                        "| |_| | \n" +
+                        "|____/  \n",
+                result
         );
     }
 
@@ -119,18 +119,74 @@ public class RomanPrinterTest {
         String result = RomanPrinter.print(number);
         assertNotNull(result);
         assertEquals(
-            " __  __  \n" +
-            "|  \\/  | \n" +
-            "| |\\/| | \n" +
-            "| |  | | \n" +
-            "|_|  |_| \n",
-            result
+                " __  __  \n" +
+                        "|  \\/  | \n" +
+                        "| |\\/| | \n" +
+                        "| |  | | \n" +
+                        "|_|  |_| \n",
+                result
         );
     }
 
     @Test
-    public void testPrint6_shouldContainAsciiVI() {
-        int number = 6;
+    public void testPrint9_shouldContainAsciiIX() {
+        int number = 9;
+        String result = RomanPrinter.print(number);
+        assertEquals(
+                " ___  __  __ \n" +
+                        "|_ _| \\ \\/ / \n" +
+                        " | |   \\  /  \n" +
+                        " | |   /  \\  \n" +
+                        "|___| /_/\\_\\ \n",
+                result
+        );
+    }
+
+    @Test
+    public void testPrint14_shouldContainAsciiXIV() {
+        int number = 14;
+        String result = RomanPrinter.print(number);
+        assertEquals(
+                "__  __  ___  __     __ \n" +
+                        "\\ \\/ / |_ _| \\ \\   / / \n" +
+                        " \\  /   | |   \\ \\ / /  \n" +
+                        " /  \\   | |    \\ V /   \n" +
+                        "/_/\\_\\ |___|    \\_/    \n",
+                result
+        );
+    }
+
+    @Test
+    public void testPrint40_shouldContainAsciiXL() {
+        int number = 40;
+        String result = RomanPrinter.print(number);
+        assertEquals(
+                "__  __  _      \n" +
+                        "\\ \\/ / | |     \n" +
+                        " \\  /  | |     \n" +
+                        " /  \\  | |___  \n" +
+                        "/_/\\_\\ |_____| \n",
+                result
+        );
+    }
+
+    @Test
+    public void testPrint90_shouldContainAsciiXC() {
+        int number = 90;
+        String result = RomanPrinter.print(number);
+        assertEquals(
+                "__  __   ____  \n" +
+                        "\\ \\/ /  / ___| \n" +
+                        " \\  /  | |     \n" +
+                        " /  \\  | |___  \n" +
+                        "/_/\\_\\  \\____| \n",
+                result
+        );
+    }
+
+    @Test
+    public void testPrint399_shouldContainAsciiCCCXCIX() {
+        int number = 399;
         String result = RomanPrinter.print(number);
         assertNotNull(result);
     }
