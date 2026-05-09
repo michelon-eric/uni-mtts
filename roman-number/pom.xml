@@ -1,12 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>it.unipd.mtss</groupId>
 	<artifactId>roman-number</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
-
 	<name>roman-number</name>
 	<url>http://maven.apache.org</url>
 
@@ -15,48 +13,21 @@
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
-				</configuration>
-				<executions>
-					<execution>
-						<id>checkstyle</id>
-						<phase>package</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 
-			<plugin>
+	<dependencies>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>5.10.2</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
+			<!-- Compilatore Java 17 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>3.3.1</version>
-				<configuration>
-					<configLocation>checkstyle.xml</configLocation>
-					<failsOnError>true</failsOnError>
-					<consoleOutput>true</consoleOutput>
-					<excludes>**/test/**/*</excludes>
-				<groupId>com.diffplug.spotless</groupId>
-				<artifactId>spotless-maven-plugin</artifactId>
-				<version>2.43.0</version>
-
-				<configuration>
-					<java>
-						<googleJavaFormat/>
-						<removeUnusedImports/>
-						<trimTrailingWhitespace/>
-						<endWithNewline/>
-					</java>
-				</configuration>
-
-				<executions>
-					<execution>
-						<goals>
-							<goal>apply</goal>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.11.0</version>
 				<configuration>
@@ -65,12 +36,14 @@
 				</configuration>
 			</plugin>
 
+			<!-- Surefire per JUnit 5 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.2.5</version>
 			</plugin>
 
+			<!-- JaCoCo per code coverage -->
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -90,15 +63,28 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<!-- Checkstyle per static analysis -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>3.3.1</version>
+				<configuration>
+					<configLocation>checkstyle.xml</configLocation>
+					<failsOnError>true</failsOnError>
+					<consoleOutput>true</consoleOutput>
+					<excludes>**/test/**/*</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>checkstyle</id>
+						<phase>package</phase>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter</artifactId>
-			<version>5.10.2</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
 </project>

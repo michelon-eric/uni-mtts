@@ -1,31 +1,14 @@
 ////////////////////////////////////////////////////////////////////
-// [ERIC] [MICHELON] [2147986]
+// Eric Michelon 2147986
 ////////////////////////////////////////////////////////////////////
 package it.unipd.mtss;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-/** Unit test for simple App. */
-public class AppTest extends TestCase {
-  /**
-   * Create the test case
-   *
-   * @param testName name of the test case
-   */
-  public AppTest(String testName) {
-    super(testName);
-  }
-
-  /**
-   * @return the suite of tests being tested
-   */
-  public static Test suite() {
-    return new TestSuite(AppTest.class);
-  }
-
-  /** Rigourous Test :-) */
-  public void testApp() {
-    assertTrue(true);
-  }
+public class AppTest {
+	@Test
+	public void placeholderTest() {
+		assertTrue(true);
+	}
 }
