@@ -24,6 +24,21 @@ public class IntegerToRomanTest {
     assertEquals("III", IntegerToRoman.convert(3));
   }
 
+	@Test
+	public void testConvert4() {
+		assertEquals("IV", IntegerToRoman.convert(4));
+	}
+
+	@Test
+	public void testConvert5() {
+		assertEquals("V", IntegerToRoman.convert(5));
+	}
+
+	@Test
+	public void testConvert6() {
+		assertEquals("VI", IntegerToRoman.convert(6));
+	}
+
   @Test
   public void testConvert0() {
     assertNull(IntegerToRoman.convert(0));
@@ -35,7 +50,7 @@ public class IntegerToRomanTest {
   }
 
   @Test
-  public void testConvertGreaterThan3() {
-    assertNull(IntegerToRoman.convert(4));
+  public void testConvertGreaterThan5() {
+    assertNull(IntegerToRoman.convert(7));
   }
 }
