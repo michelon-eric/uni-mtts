@@ -15,6 +15,10 @@ jobs:
 
     # ambiente virtuale da usare per per le Github actions
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        # necessario perche' file pom.xml e' dentro la directory `roman-number`
+        working-directory: roman-number
 
     steps:
 
