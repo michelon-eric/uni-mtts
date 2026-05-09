@@ -68,6 +68,21 @@ public class RomanPrinterTest {
         );
     }
 
+	@Test
+	public void testPrint50_shouldContainAsciiL() {
+		int number = 50;
+		String result = RomanPrinter.print(number);
+		assertNotNull(result);
+		assertEquals(
+			" _      \n" +
+			"| |     \n" +
+			"| |     \n" +
+			"| |___  \n" +
+			"|_____| \n",
+			result
+		);
+	}
+
     @Test
     public void testPrint6_shouldContainAsciiVI() {
         int number = 6;
