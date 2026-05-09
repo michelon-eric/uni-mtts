@@ -68,65 +68,65 @@ public class RomanPrinterTest {
         );
     }
 
-	@Test
-	public void testPrint50_shouldContainAsciiL() {
-		int number = 50;
-		String result = RomanPrinter.print(number);
-		assertNotNull(result);
-		assertEquals(
-			" _      \n" +
-			"| |     \n" +
-			"| |     \n" +
-			"| |___  \n" +
-			"|_____| \n",
-			result
-		);
-	}
+    @Test
+    public void testPrint50_shouldContainAsciiL() {
+        int number = 50;
+        String result = RomanPrinter.print(number);
+        assertNotNull(result);
+        assertEquals(
+            " _      \n" +
+            "| |     \n" +
+            "| |     \n" +
+            "| |___  \n" +
+            "|_____| \n",
+            result
+        );
+    }
 
-	@Test
-	public void testPrint100_shouldContainAsciiC() {
-		int number = 100;
-		String result = RomanPrinter.print(number);
-		assertNotNull(result);
-		assertEquals(
-			"  ____  \n" +
-			" / ___| \n" +
-			"| |     \n" +
-			"| |___  \n" +
-			" \\____| \n",
-			result
-		);
-	}
+    @Test
+    public void testPrint100_shouldContainAsciiC() {
+        int number = 100;
+        String result = RomanPrinter.print(number);
+        assertNotNull(result);
+        assertEquals(
+            "  ____  \n" +
+            " / ___| \n" +
+            "| |     \n" +
+            "| |___  \n" +
+            " \\____| \n",
+            result
+        );
+    }
 
-	@Test
-	public void testPrint500_shouldContainAsciiD() {
-		int number = 500;
-		String result = RomanPrinter.print(number);
-		assertNotNull(result);
-		assertEquals(
-			" ____   \n" +
-			"|  _ \\  \n" +
-			"| | | | \n" +
-			"| |_| | \n" +
-			"|____/  \n",
-			result
-		);
-	}
+    @Test
+    public void testPrint500_shouldContainAsciiD() {
+        int number = 500;
+        String result = RomanPrinter.print(number);
+        assertNotNull(result);
+        assertEquals(
+            " ____   \n" +
+            "|  _ \\  \n" +
+            "| | | | \n" +
+            "| |_| | \n" +
+            "|____/  \n",
+            result
+        );
+    }
 
-	@Test
-	public void testPrint1000_shouldContainAsciiM() {
-		int number = 1000;
-		String result = RomanPrinter.print(number);
-		assertNotNull(result);
-		assertEquals(
-			" __  __  \n" +
-			"|  \\/  | \n" +
-			"| |\\/| | \n" +
-			"| |  | | \n" +
-			"|_|  |_| \n",
-			result
-		);
-	}
+    @Test
+    public void testPrint1000_shouldContainAsciiM() {
+        int number = 1000;
+        String result = RomanPrinter.print(number);
+        assertNotNull(result);
+        assertEquals(
+            " __  __  \n" +
+            "|  \\/  | \n" +
+            "| |\\/| | \n" +
+            "| |  | | \n" +
+            "|_|  |_| \n",
+            result
+        );
+    }
 
     @Test
     public void testPrint6_shouldContainAsciiVI() {
