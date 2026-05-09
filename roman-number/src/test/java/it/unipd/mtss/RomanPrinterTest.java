@@ -24,7 +24,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void testPrint1_shouldContainAsciiIV() {
+    public void testPrint4_shouldContainAsciiIV() {
         int number = 4;
         String result = RomanPrinter.print(number);
         assertNotNull(result);
