@@ -4,22 +4,27 @@
 package it.unipd.mtss;
 
 public class IntegerToRoman {
-  public static String convert(int number) {
-    if (number < 1 || number > 6) {
-      return null;
-    }
+    private static final int[] VALUES = {
+        10, 9, 5, 4, 1
+    };
 
-    if (number == 5) {
-      return "V";
-    }
-    if (number == 4) {
-      return "IV";
-    }
+    private static final String[] SYMBOLS = {
+        "X", "IX", "V", "IV", "I"
+    };
 
-    if (number > 4) {
-      return "V" + "I".repeat(number - 5);
-    }
+    public static String convert(int number) {
+        if (number < 1 || number > 10) {
+            return null;
+        }
 
-    return "I".repeat(number);
-  }
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < VALUES.length; i++) {
+            while (number >= VALUES[i]) {
+                result.append(SYMBOLS[i]);
+                number -= VALUES[i];
+            }
+        }
+
+        return result.toString();
+    }
 }
