@@ -105,7 +105,27 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    public void testConvertGreaterThan50_shouldReturnNull() {
-        assertNull(IntegerToRoman.convert(51));
+    public void testConvert90_shouldReturnXC() {
+        assertEquals("XC", IntegerToRoman.convert(90));
+    }
+
+    @Test
+    public void testConvert91_shouldReturnXCI() {
+        assertEquals("XCI", IntegerToRoman.convert(91));
+    }
+
+    @Test
+    public void testConvert99_shouldReturnXCIX() {
+        assertEquals("XCIX", IntegerToRoman.convert(99));
+    }
+
+    @Test
+    public void testConvert100_shouldReturnC() {
+        assertEquals("C", IntegerToRoman.convert(100));
+    }
+
+    @Test
+    public void testConvertGreaterThan100_shouldReturnNull() {
+        assertNull(IntegerToRoman.convert(101));
     }
 }
