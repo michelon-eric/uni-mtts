@@ -5,15 +5,15 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
     private static final int[] VALUES = {
-        20, 10, 9, 5, 4, 1
+        50, 40, 10, 9, 5, 4, 1
     };
 
     private static final String[] SYMBOLS = {
-        "XX", "X", "IX", "V", "IV", "I"
+        "L", "XL", "X", "IX", "V", "IV", "I"
     };
 
     public static String convert(int number) {
-        if (number < 1 || number > 20) {
+        if (number < 1 || number > 50) {
             return null;
         }
 
